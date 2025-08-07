@@ -54,6 +54,8 @@ background = X.values
 # 2. 定义 ensemble 的预测函数
 def ensemble_predict_proba(data):
     # data: numpy array 或者 DataFrame
+    print(type(ensemble))  # 打印 ensemble 类型
+    print(dir(ensemble))   # 看它有没有 predict_proba
     df = pd.DataFrame(data, columns=X.columns) if not isinstance(data, pd.DataFrame) else data
     return ensemble.predict_proba(df)[:, 1]
 
