@@ -13,7 +13,8 @@ st.title("TNBC pCR Prediction Tool")
 st.markdown("### Enter values for 6 phenotype-based features")
 
 # === 加载模型 ===
-from utils/ensemble.py import AverageEnsemble
+# 导入AverageEnsemble这个类
+from utils.ensemble.py import AverageEnsemble
 model_path = './SHAP/Ensemble_voting_no_split_selected.pkl'
 ensemble = joblib.load(model_path)
 
