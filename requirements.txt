@@ -6,3 +6,4 @@ scikit-learn
 numpy
 pandas
 cloudpickle
+openpyxl>=3.1.2
