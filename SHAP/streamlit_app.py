@@ -10,7 +10,7 @@ import os
 # streamlit_app.py
 import sys
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
 # === 初始化 ===
 st.set_page_config(page_title="TNBC pCR Prediction Tool")
