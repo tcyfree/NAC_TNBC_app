@@ -30,6 +30,7 @@ import cloudpickle
 with open(model_path, "rb") as f:
     ensemble = cloudpickle.load(f)
 
+print(dir(ensemble))
 
 # =======================================
 # STAR: Background数据读取
