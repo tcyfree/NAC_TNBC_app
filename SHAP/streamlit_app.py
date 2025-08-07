@@ -7,6 +7,14 @@ import matplotlib.pyplot as plt
 import tempfile
 import os
 
+# streamlit_app.py
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from utils.ensemble import AverageEnsemble
+
 # === 初始化 ===
 st.set_page_config(page_title="TNBC pCR Prediction Tool")
 st.title("TNBC pCR Prediction Tool")
