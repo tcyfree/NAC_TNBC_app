@@ -21,7 +21,13 @@ st.markdown("### Enter values for 6 phenotype-based features")
 # 导入AverageEnsemble这个类
 from utils.ensemble import AverageEnsemble
 model_path = './SHAP/Ensemble_voting_no_split_selected.pkl'
-ensemble = joblib.load(model_path)
+# ensemble = joblib.load(model_path)
+
+import cloudpickle
+
+with open(model_path, "rb") as f:
+    ensemble = cloudpickle.load(f)
+
 
 # =======================================
 # STAR: Background数据读取
