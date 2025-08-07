@@ -13,13 +13,13 @@ st.title("TNBC pCR Prediction Tool")
 st.markdown("### Enter values for 6 phenotype-based features")
 
 # === 加载模型 ===
-model_path = '/home/network/Desktop/Project/NAC_TNBC_app/SHAP/Ensemble_voting_no_split_selected.pkl'
+model_path = './SHAP/Ensemble_voting_no_split_selected.pkl'
 ensemble = joblib.load(model_path)
 
 # =======================================
 # STAR: Background数据读取
 # =======================================
-df = pd.read_excel("/home/network/Desktop/Project/NAC_TNBC_app/SHAP/cluster_factors_pearson_6.xlsx")
+df = pd.read_excel("./SHAP/cluster_factors_pearson_6.xlsx")
 feature_cols = [c for c in df.columns if c not in ["ID", "pCR"]]
 # 去掉非数值列
 non_num = df[feature_cols].select_dtypes(exclude="number").columns
